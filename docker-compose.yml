@@ -1,0 +1,12 @@
+version: '3'
+services:
+  react-typescript:
+    build:
+      context: ./src
+    ports:
+      - "3001:3001"
+    container_name: react-typescript
+    stdin_open: true
+    volumes:
+       - ./my-app:/usr/src
+       - /usr/node_modules
